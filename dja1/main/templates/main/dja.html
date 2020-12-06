@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>{% block title %}  {% endblock %}</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,700|Roboto:400,500&amp;subset=cyrillic">
+  <link rel="stylesheet" href="{% static 'main/css/normalize.css' %}">
+  <link rel="stylesheet" href="{% static 'main/css/fonts.css' %}">
+  <link rel="stylesheet" href="{% static 'main/css/jquery.fancybox.min.css' %}">
+  <link rel="stylesheet" href="{% static 'main/css/slick.css' %}">
+  <link rel="stylesheet" href="{% static 'main/css/jquery.formstyler.css' %}">
+  <link rel="stylesheet" href="{% static 'main/css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'main/css/media.css' %}">
+</head>
+<body>
+    <header class="header">
+      <div class="header__top">
+        <div class="container">
+          <div class="header__contacts">
+            <a class="header__phone" href="tel:380963092145">+38 (096) 309 21 45</a>
+            <a class="header__email" href="#">layout585@gmail.com</a>
+            <a data-fancybox data-src="#modal" href="javascript:;" class="header__btn" href="#">Бесплатная
+              консультация</a>
+          </div>
+        </div>
+      </div>
+      <div class="header__content">
+        <div class="container">
+          <div class="header__content-inner">
+            <div class="header__logo">
+              <a href="#">
+                <img src="{% static 'main/img/logo.png' %}" alt="">
+              </a>
+            </div>
+            <nav class="menu">
+              <div class="header__btn-menu">
+                <span class="icon-bars"></span>
+              </div>
+              <ul>
+                <li><a href="#">Главная</a></li>
+                <li><a href="#">О компании</a></li>
+                <li><a href="#">Услуги</a></li>
+                <li><a href="#">Контакты</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+  
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="{% static 'main/js/jquery.fancybox.min.js' %}"></script>
+    <script src="{% static 'main/js/slick.min.js' %}"></script>
+    <script src="{% static 'main/js/jquery.formstyler.min.js' %}"></script>
+    <script src="{% static 'main/js/main.js' %}"></script>
+  </body>
+  
